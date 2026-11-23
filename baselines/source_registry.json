@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "selected_methods": {
+    "DJSRH": {
+      "repository": "https://github.com/zs-zhong/DJSRH",
+      "commit": "6041c2df810723dd0052e2e5b7c6bd33033f0f21",
+      "local_dir": "djsrh-upstream",
+      "models_file": "models.py",
+      "models_sha256": "f5e837fe4ac836bb92c0c56d1c74b51ca6e9d96ee06d68752943c4b4a4f639d2",
+      "train_sha256": "c66a1f5625b10caeaede0530bd8f73b133010fc33811c9af3d2f130300b0165c",
+      "license": "MIT",
+      "license_sha256": "01a4f88c66225286c09f0ce7ca615197dff163f73a620f5234ca49c5fad29585",
+      "official_code_scope": "MIRFLICKR/NUS-WIDE raw images with AlexNet and BoW text; mini-batch joint-semantics reconstruction",
+      "adaptation": "Use UCCH VGG features instead of raw-image AlexNet, add MSCOCO through the same protocol loader, retain official TxtNet and mini-batch losses"
+    },
+    "JDSH": {
+      "repository": "https://github.com/KaiserLew/JDSH",
+      "commit": "caa8224e2f2e028042fe270cab318c3b96590e41",
+      "local_dir": "jdsh-upstream",
+      "models_file": "models.py",
+      "models_sha256": "70a9995e5da3b78d1763d3e80a9371c25c0ac9b464e738954a5502ff212c9c98",
+      "train_sha256": "2ed396a105d5a960af6786334092336c040b4d60e6a70bf626454ef29ad45f5f",
+      "license": "NO_LICENSE_FILE",
+      "license_sha256": null,
+      "official_code_scope": "MIRFLICKR/NUS-WIDE raw images with frozen AlexNet and BoW text; mini-batch distribution-based similarity",
+      "adaptation": "Use UCCH VGG features instead of raw-image AlexNet, add MSCOCO through the same protocol loader, retain official TxtNet and mini-batch losses"
+    }
+  },
+  "audited_alternatives": {
+    "AGCH": {
+      "status": "OFFICIAL_REPOSITORY_NOT_IDENTIFIED",
+      "decision": "Do not use the unrelated third-party AGCH-Impl as an official baseline"
+    },
+    "DGCPN": {
+      "repository": "https://github.com/Atmegal/DGCPN",
+      "commit": "9f62c56e037c0c399451d0f02db05b8666d439ed",
+      "license": "NO_LICENSE_FILE",
+      "status": "NOT_SELECTED_FOR_FULL_RETRIEVAL_TRAINING",
+      "decision": "Official implementation constructs dense train-by-train similarity matrices; do not silently replace them with an unvalidated sparse approximation"
+    },
+    "CIRH": {
+      "repository": "https://github.com/XizeWu/CIRH",
+      "commit": "0f6439d3cad0240ea4a9924ff168aa2cef3b3b1e",
+      "license": "NO_LICENSE_FILE",
+      "status": "NOT_SELECTED_FOR_FULL_RETRIEVAL_TRAINING",
+      "decision": "Official implementation constructs dense train-by-train similarity matrices; retain source for audit but do not alter the algorithm merely to force the grid"
+    }
+  }
+}
